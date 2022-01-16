@@ -1,0 +1,28 @@
+.nav {
+    &__list {
+
+    }
+    &__item {
+        margin-top: 12px;
+        display: flex;
+        width: 155px;
+        position: relative;
+        font-family: KinopoiskLight;
+        font-size: 1.4rem;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $primary-black;
+        }
+        span {
+            display: block;
+            margin-right: 20px;
+            font-family: "KinopoiskMedium";
+            font-size: 1.6rem;
+        }
+    }
+}

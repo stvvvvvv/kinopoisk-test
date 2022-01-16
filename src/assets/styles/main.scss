@@ -1,0 +1,83 @@
+// ===== ПОДКЛЮЧЕНИЕ ШРИФТОВ =====
+@font-face {
+    font-family: "KinopoiskLight"; 
+    src: url("../fonts/kinopoisk-light.woff2")
+    format("woff2"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+@font-face {
+    font-family: "KinopoiskRegular"; 
+    src: url("../fonts/kinopoisk-regular.woff2")
+    format("woff2"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+@font-face {
+    font-family: "KinopoiskMedium"; 
+    src: url("../fonts/kinopoisk-medium.woff2")
+    format("woff2"); 
+    font-style: normal; 
+    font-weight: medium; 
+}
+
+@font-face {
+    font-family: "FuturaBold"; 
+    src: url("../fonts/futura-bold.woff2")
+    format("woff2"); 
+    font-style: normal; 
+    font-weight: bold; 
+}
+html {
+    font-family: "KinopoiskLight";
+    font-size: 10px;
+}
+
+// ===== /ПОДКЛЮЧЕНИЕ ШРИФТОВ =====
+
+@import './re.scss'; //Сброс стилей
+@import './vars.scss'; // ИМПОРТ ПЕРЕМЕННЫХ
+
+
+//===== ИМПОРТ БЛОКОВ =====
+@import './blocks/aside.scss';
+@import './blocks/burger.scss';
+@import './blocks/header.scss';
+@import './blocks/hints.scss';
+@import './blocks/nav.scss';
+@import './blocks/slider.scss';
+@import './blocks/slide.scss';
+@import './blocks/rightside.scss';
+
+//===== /ИМПОРТ БЛОКОВ =====
+
+
+//===== ОБЩИЕ СТИЛИ =====
+html {
+    overflow: hidden;
+}
+body {
+    font-size: 1.6rem;
+}
+
+main {
+    position: relative;
+}
+
+.title {
+    text-align: center;
+    font-size: 4.5rem;
+    color: $header-yellow;
+    text-transform: uppercase;
+    font-family: FuturaBold;
+    letter-spacing: -0.69px;
+}
+
+.text-o-vertical {
+    width: 20px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+//===== /ОБЩИЕ СТИЛИ =====

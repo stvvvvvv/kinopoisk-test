@@ -1,0 +1,9 @@
+.aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.scroll-next {
+    z-index: 100;
+}
