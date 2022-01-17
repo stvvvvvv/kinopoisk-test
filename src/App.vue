@@ -29,7 +29,13 @@
           <span>{{ currentSlide + 1}} / {{ this.slidesList.length }}</span>
         </div>
         <div class="slide__container">
-          <img class="slide__btn_prev" src="./assets/images/prev.png" alt="Назад" @click="prevSlide">
+          <img
+            class="slide__btn_prev"
+            src="./assets/images/prev.png"
+            alt="Назад"
+            v-if="this.currentSlide > 0"
+            @click="prevSlide()"
+          >
           <Slide
             v-for="(slide, index) in slidesList"
             :key="index"
@@ -37,7 +43,12 @@
             :slide_data="slide"
             :currentSlide="currentSlide"
           />
-          <img class="slide__btn_next" src="./assets/images/next.png" alt="Далее" @click="nextSlide">
+          <img
+            class="slide__btn_next"
+            src="./assets/images/next.png"
+            alt="Далее"
+            v-if="!(this.currentSlide == this.slidesList.length - 1)"
+            @click="nextSlide">
         </div>
         <button class="slider__btn">Искать промокод <img src="./assets/images/Arrow.png" alt=""> </button>
       </div>
@@ -98,7 +109,6 @@ export default {
     prevSlide () {
       if (this.currentSlide > 0) {
         this.currentSlide--
-        console.log(this.slidesList.length)
       }
     }
   }
